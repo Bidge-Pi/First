@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUSTAI 2025 - NSFW Illimité Réel</title>
+  <style>
+    :root {
+      --primary: #ff2e96;
+      --primary-light: #ff6bc8;
+      --background: #000;
+      --card-bg: rgba(255, 20, 120, 0.15);
+      --card-border: #ff2e96;
+      --text: #fff;
+      --shadow: 0 0 60px #ff2e9666;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      background: var(--background);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      text-align: center;
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #1a0033, #000);
+      overflow-x: hidden;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 500px;
+      animation: fadeIn 0.8s ease-out;
+    }
+    
+    .box {
+      background: var(--card-bg);
+      border: 2px solid var(--card-border);
+      border-radius: 30px;
+      padding: 40px 30px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px #ff4599aa;
+    }
+    
+    .box::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,46,150,0.1) 0%, rgba(255,46,150,0) 70%);
+      z-index: -1;
+    }
+    
+    h1 {
+      font-size: 44px;
+      background: linear-gradient(90deg, var(--primary), var(--primary-light));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    h1::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 10%;
+      width: 80%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--primary), transparent);
+    }
+    
+    .tagline {
+      font-size: 18px;
+      margin-bottom: 25px;
+      line-height: 1.4;
+      color: #e6e6e6;
+    }
+    
+    .price {
+      font-size: 60px;
+      font-weight: 900;
+      background: linear-gradient(90deg, var(--primary-light), #fff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 20px 0;
+      text-shadow: 0 0 20px rgba(255, 107, 200, 0.5);
+    }
+    
+    .features {
+      margin: 20px 0;
+      font-size: 16px;
+      color: #cccccc;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .feature-item::before {
+      content: '✓';
+      color: var(--primary);
+      font-weight: bold;
+    }
+    
+    .btn {
+      background: var(--primary);
+      color: #000;
+      padding: 20px;
+      border-radius: 50px;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+      display: block;
+      margin: 25px auto;
+      width: 85%;
+      box-shadow: 0 10px 40px #ff459960;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .btn:hover {
+      background: #ff1a8c;
+      transform: scale(1.03);
+      box-shadow: 0 15px 50px #ff4599aa;
+    }
+    
+    .btn:active {
+      transform: scale(0.98);
+    }
+    
+    .btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.5s;
+    }
+    
+    .btn:hover::after {
+      left: 100%;
+    }
+    
+    .bonus {
+      font-size: 14px;
+      margin-top: 30px;
+      color: #bbbbbb;
+      padding: 10px;
+      border-top: 1px solid rgba(255, 46, 150, 0.3);
+    }
+    
+    .pulse {
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+      100% { transform: scale(1); }
+    }
+    
+    .floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+    
+    @keyframes floating {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    /* Responsive */
+    @media (max-width: 480px) {
+      .box {
+        padding: 30px 20px;
+      }
+      
+      h1 {
+        font-size: 36px;
+      }
+      
+      .price {
+        font-size: 50px;
+      }
+      
+      .btn {
+        font-size: 18px;
+        padding: 18px;
+      }
+      
+      .features {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box pulse">
+      <h1 class="floating">LUSTAI 2025</h1>
+      <p class="tagline">Générateur NSFW illimité réel<br>Flux + Pony uncensored</p>
+      
+      <div class="price">9,99€ à vie</div>
+      
+      <div class="features">
+        <span class="feature-item">Pas d'abonnement</span>
+        <span class="feature-item">Pas de limite</span>
+        <span class="feature-item">Fonctionne direct</span>
+      </div>
+      
+      <a class="btn" href="https://nsfw.perchance.org" target="_blank">Déverrouiller l'accès illimité</a>
+      
+      <p class="bonus">+ 100 prompts ultra-hardcore inclus</p>
+    </div>
+  </div>
+
+  <script>
+    // Ajout d'un effet de particules en arrière-plan
+    document.addEventListener('DOMContentLoaded', function() {
+      const container = document.querySelector('.container');
+      
+      // Effet de scintillement aléatoire
+      setInterval(() => {
+        const spark = document.createElement('div');
+        spark.style.position = 'fixed';
+        spark.style.width = Math.random() * 3 + 'px';
+        spark.style.height = spark.style.width;
+        spark.style.background = `hsl(${Math.random() * 360}, 100%, 70%)`;
+        spark.style.borderRadius = '50%';
+        spark.style.left = Math.random() * 100 + 'vw';
+        spark.style.top = Math.random() * 100 + 'vh';
+        spark.style.pointerEvents = 'none';
+        spark.style.zIndex = '-1';
+        spark.style.animation = `sparkle ${Math.random() * 2 + 1}s ease-out forwards`;
+        
+        document.body.appendChild(spark);
+        
+        setTimeout(() => {
+          spark.remove();
+        }, 3000);
+      }, 200);
+      
+      // Ajout du style pour l'animation des particules
+      const style = document.createElement('style');
+      style.textContent = `
+        @keyframes sparkle {
+          0% { opacity: 0; transform: scale(0); }
+          50% { opacity: 1; transform: scale(1); }
+          100% { opacity: 0; transform: scale(0) translateY(-20px); }
+        }
+      `;
+      document.head.appendChild(style);
+      
+      // Effet de confirmation au clic sur le bouton
+      const btn = document.querySelector('.btn');
+      btn.addEventListener('click', function(e) {
+        if (!confirm('Êtes-vous sûr de vouloir accéder à LUSTAI 2025 ?')) {
+          e
